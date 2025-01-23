@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int frequencyElements(int arr[],int n){
+    for(int i = 0; i < n; i++){
+        int num = arr[i];
+        int cnt = 0;
+        
+        for(int j = 0; j < n;j++){
+            if(arr[j]==num){
+                cnt++;
+            }
+        }
+        if(cnt==1){
+            return num;
+        }
+    }
+    
+    return -1;
+}
+
+int main(){
+    int arr[7] = {1,1,3,4,4,5,5};
+    int n = 7;
+    
+    int ans = frequencyElements(arr,n);
+    
+    printf("%d ",ans);
+    
+    return 0;
+}
