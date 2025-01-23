@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char str[100];
+    
+    printf("Enter the string here: ");
+    scanf("%s",str);
+    
+    int n = strlen(str);
+    
+    int Maxodd = -1;
+    
+    for(int i = 0; i < n; i++){
+        if(str[i]%2 != 0){
+            int num = str[i] - '0';
+            
+            if(num > Maxodd){
+                Maxodd = num;
+            }
+        }
+    }
+    
+    printf("The Maximum Odd number in the string is: %d",Maxodd);
+    
+    return 0;
+}
